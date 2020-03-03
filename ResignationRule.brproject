@@ -1,0 +1,618 @@
+{
+  "Type" : "ProjectVersion",
+  "Version" : {
+    "Id" : "000000000000000000",
+    "Revision" : "000000000000000000",
+    "Description" : "Initial",
+    "ParentId" : "000000000000000000",
+    "Project" : "c0c245806f0549c8a493e908e2471f72"
+  },
+  "Project" : [ {
+    "Id" : "c0c245806f0549c8a493e908e2471f72",
+    "Name" : "ResignationRule",
+    "Description" : [ {
+      "Language" : "",
+      "Text" : "Custom Business rule for resignation"
+    }, {
+      "Language" : "en",
+      "Text" : "Custom Business rule for resignation"
+    } ],
+    "Label" : [ {
+      "Language" : "",
+      "Text" : "Resignation Custom Business Rule"
+    }, {
+      "Language" : "en",
+      "Text" : "Resignation Custom Business Rule"
+    } ],
+    "Annotations" : [ {
+      "Key" : "com.sap.rules.expression.language",
+      "Value" : "2.0"
+    } ],
+    "Interface" : [ {
+      "Id" : "7329018950f447b6880ef2ddeefc543f",
+      "Name" : "Default",
+      "ObjectId" : [ "856c6d33da3445e6b1cdf10e9a3bce8b", "dc8f69036e634b008887f05a2d3bdefb", "7903e470be324f6bbbea1df78b845f1a" ]
+    } ]
+  } ],
+  "DataObject" : [ {
+    "Id" : "dc8f69036e634b008887f05a2d3bdefb",
+    "Name" : "EmpApprovers",
+    "Description" : [ {
+      "Language" : "",
+      "Text" : "Approvers for clearing resignation and getting Experience letter"
+    }, {
+      "Language" : "en",
+      "Text" : "Approvers for clearing resignation and getting Experience letter"
+    } ],
+    "Project" : "c0c245806f0549c8a493e908e2471f72",
+    "Type" : "S",
+    "Annotations" : [ ],
+    "Structure" : {
+      "Component" : [ {
+        "Id" : "784c05e814ff4234915674ee3c0d0866",
+        "Name" : "ITClearanceApprover",
+        "Type" : "I",
+        "Element" : {
+          "BusinessDataType" : "S"
+        },
+        "Description" : [ {
+          "Language" : "en",
+          "Text" : "Approver Email for IT Clearance"
+        }, {
+          "Language" : "",
+          "Text" : "Approver Email for IT Clearance"
+        } ],
+        "Annotations" : [ ]
+      }, {
+        "Id" : "a1e1eae00d644794b23d8a65fbd241a3",
+        "Name" : "FinanceClearanceApprover",
+        "Type" : "I",
+        "Element" : {
+          "BusinessDataType" : "S"
+        },
+        "Description" : [ {
+          "Language" : "en",
+          "Text" : "Finance  Clearance"
+        }, {
+          "Language" : "",
+          "Text" : "Finance  Clearance"
+        } ],
+        "Annotations" : [ ]
+      }, {
+        "Id" : "920c3f14e30b4c85bc848f8603d8bfca",
+        "Name" : "HrClearanceApprover",
+        "Type" : "I",
+        "Element" : {
+          "BusinessDataType" : "S"
+        },
+        "Description" : [ {
+          "Language" : "en",
+          "Text" : "HR  Clearance"
+        }, {
+          "Language" : "",
+          "Text" : "HR  Clearance"
+        } ],
+        "Annotations" : [ ]
+      }, {
+        "Id" : "944e8ab283104df5b83b6587b240f4ca",
+        "Name" : "OtherAssetClearanceApprover",
+        "Type" : "I",
+        "Element" : {
+          "BusinessDataType" : "S"
+        },
+        "Description" : [ {
+          "Language" : "en",
+          "Text" : "Other Asset Including Employee Badge Clearance"
+        }, {
+          "Language" : "",
+          "Text" : "Other Asset Including Employee Badge Clearance"
+        } ],
+        "Annotations" : [ ]
+      } ]
+    },
+    "Extensible" : false
+  }, {
+    "Id" : "7903e470be324f6bbbea1df78b845f1a",
+    "Name" : "employmentInfo",
+    "Description" : [ {
+      "Language" : "en",
+      "Text" : "Business group information for employee"
+    }, {
+      "Language" : "",
+      "Text" : "Business group information for employee"
+    } ],
+    "Project" : "c0c245806f0549c8a493e908e2471f72",
+    "Type" : "S",
+    "Annotations" : [ ],
+    "Structure" : {
+      "Component" : [ {
+        "Id" : "06811e4273164d69970ef8cdddb37c17",
+        "Name" : "division",
+        "Type" : "I",
+        "Element" : {
+          "BusinessDataType" : "S"
+        },
+        "Description" : [ {
+          "Language" : "",
+          "Text" : "Division"
+        }, {
+          "Language" : "en",
+          "Text" : "Division"
+        } ],
+        "Annotations" : [ ]
+      }, {
+        "Id" : "860d0441b7a04594b727797b78e6e85d",
+        "Name" : "compcode",
+        "Type" : "I",
+        "Element" : {
+          "BusinessDataType" : "S"
+        },
+        "Description" : [ {
+          "Language" : "en",
+          "Text" : "Company Code"
+        }, {
+          "Language" : "",
+          "Text" : "Company Code"
+        } ],
+        "Annotations" : [ ]
+      }, {
+        "Id" : "a2f8aecdad8a43c2bb229d3f25405db5",
+        "Name" : "businessUnit",
+        "Type" : "I",
+        "Element" : {
+          "BusinessDataType" : "S"
+        },
+        "Description" : [ {
+          "Language" : "en",
+          "Text" : "Business Unit"
+        }, {
+          "Language" : "",
+          "Text" : "Business Unit"
+        } ],
+        "Annotations" : [ ]
+      } ]
+    },
+    "Extensible" : false
+  } ],
+  "Rule" : [ {
+    "Id" : "856c6d33da3445e6b1cdf10e9a3bce8b",
+    "Name" : "GettingApprover",
+    "Description" : [ {
+      "Language" : "en",
+      "Text" : "Approver Details"
+    }, {
+      "Language" : "",
+      "Text" : "Approver Details"
+    } ],
+    "Project" : "c0c245806f0549c8a493e908e2471f72",
+    "Type" : "DT",
+    "Result" : {
+      "ObjectId" : "dc8f69036e634b008887f05a2d3bdefb"
+    },
+    "DecisionTable" : {
+      "HitPolicy" : "SHF",
+      "Column" : [ {
+        "Id" : "1",
+        "SequenceNumber" : 1,
+        "Description" : [ {
+          "Language" : "",
+          "Text" : ""
+        } ],
+        "Type" : "C",
+        "Condition" : {
+          "Expression" : "compcode of the employmentInfo",
+          "AST" : [ {
+            "Id" : "1",
+            "Root" : true,
+            "Reference" : "/7903e470be324f6bbbea1df78b845f1a/860d0441b7a04594b727797b78e6e85d"
+          } ],
+          "ValueOnly" : false,
+          "FixedOperator" : "="
+        }
+      }, {
+        "Id" : "2",
+        "SequenceNumber" : 2,
+        "Description" : [ {
+          "Language" : "",
+          "Text" : ""
+        } ],
+        "Type" : "C",
+        "Condition" : {
+          "Expression" : "businessUnit of the employmentInfo",
+          "AST" : [ {
+            "Id" : "1",
+            "Root" : true,
+            "Reference" : "/7903e470be324f6bbbea1df78b845f1a/a2f8aecdad8a43c2bb229d3f25405db5"
+          } ],
+          "ValueOnly" : false,
+          "FixedOperator" : "="
+        }
+      }, {
+        "Id" : "3",
+        "SequenceNumber" : 3,
+        "Description" : [ {
+          "Language" : "",
+          "Text" : ""
+        } ],
+        "Type" : "C",
+        "Condition" : {
+          "Expression" : "division of the employmentInfo",
+          "AST" : [ {
+            "Id" : "1",
+            "Root" : true,
+            "Reference" : "/7903e470be324f6bbbea1df78b845f1a/06811e4273164d69970ef8cdddb37c17"
+          } ],
+          "ValueOnly" : false,
+          "FixedOperator" : "="
+        }
+      }, {
+        "Id" : "4",
+        "SequenceNumber" : 4,
+        "Description" : [ ],
+        "Type" : "R",
+        "Result" : {
+          "Segment" : "a1e1eae00d644794b23d8a65fbd241a3",
+          "Cell" : {
+            "Mode" : "E",
+            "FixedExpression" : null,
+            "AST" : [ ]
+          }
+        }
+      }, {
+        "Id" : "5",
+        "SequenceNumber" : 5,
+        "Description" : [ ],
+        "Type" : "R",
+        "Result" : {
+          "Segment" : "944e8ab283104df5b83b6587b240f4ca",
+          "Cell" : {
+            "Mode" : "E",
+            "FixedExpression" : null,
+            "AST" : [ ]
+          }
+        }
+      }, {
+        "Id" : "6",
+        "SequenceNumber" : 6,
+        "Description" : [ ],
+        "Type" : "R",
+        "Result" : {
+          "Segment" : "920c3f14e30b4c85bc848f8603d8bfca",
+          "Cell" : {
+            "Mode" : "E",
+            "FixedExpression" : null,
+            "AST" : [ ]
+          }
+        }
+      }, {
+        "Id" : "7",
+        "SequenceNumber" : 7,
+        "Description" : [ ],
+        "Type" : "R",
+        "Result" : {
+          "Segment" : "784c05e814ff4234915674ee3c0d0866",
+          "Cell" : {
+            "Mode" : "E",
+            "FixedExpression" : null,
+            "AST" : [ ]
+          }
+        }
+      } ],
+      "Row" : [ {
+        "Id" : "3",
+        "SequenceNumber" : 1
+      }, {
+        "Id" : "1",
+        "SequenceNumber" : 2
+      } ],
+      "Cell" : [ {
+        "ColumnId" : "3",
+        "RowId" : "1",
+        "Expression" : "'MANU'",
+        "AST" : [ {
+          "Id" : "3",
+          "Value" : "MANU",
+          "Output" : {
+            "DataObjectType" : "E",
+            "BusinessDataType" : "S"
+          }
+        }, {
+          "Id" : "2",
+          "Placeholder" : true
+        }, {
+          "Id" : "1",
+          "Root" : true,
+          "Placeholder" : true,
+          "Children" : [ {
+            "Id" : "2",
+            "SequenceNumber" : 1
+          }, {
+            "Id" : "3",
+            "SequenceNumber" : 2
+          } ]
+        } ]
+      }, {
+        "ColumnId" : "4",
+        "RowId" : "1",
+        "Expression" : "'sgsudipmath@gmail.com'",
+        "AST" : [ {
+          "Id" : "1",
+          "Root" : true,
+          "Value" : "sgsudipmath@gmail.com",
+          "Output" : {
+            "DataObjectType" : "E",
+            "BusinessDataType" : "S"
+          }
+        } ]
+      }, {
+        "ColumnId" : "1",
+        "RowId" : "3",
+        "Expression" : "'1010'",
+        "AST" : [ {
+          "Id" : "3",
+          "Value" : "1010",
+          "Output" : {
+            "DataObjectType" : "E",
+            "BusinessDataType" : "S"
+          }
+        }, {
+          "Id" : "2",
+          "Placeholder" : true
+        }, {
+          "Id" : "1",
+          "Root" : true,
+          "Placeholder" : true,
+          "Children" : [ {
+            "Id" : "2",
+            "SequenceNumber" : 1
+          }, {
+            "Id" : "3",
+            "SequenceNumber" : 2
+          } ]
+        } ]
+      }, {
+        "ColumnId" : "5",
+        "RowId" : "3",
+        "Expression" : "'sudip.architect@gmail.com'",
+        "AST" : [ {
+          "Id" : "1",
+          "Root" : true,
+          "Value" : "sudip.architect@gmail.com",
+          "Output" : {
+            "DataObjectType" : "E",
+            "BusinessDataType" : "S"
+          }
+        } ]
+      }, {
+        "ColumnId" : "2",
+        "RowId" : "1",
+        "Expression" : "'PRODS'",
+        "AST" : [ {
+          "Id" : "1",
+          "Root" : true,
+          "Placeholder" : true,
+          "Children" : [ {
+            "Id" : "2",
+            "SequenceNumber" : 1
+          }, {
+            "Id" : "3",
+            "SequenceNumber" : 2
+          } ]
+        }, {
+          "Id" : "2",
+          "Placeholder" : true
+        }, {
+          "Id" : "3",
+          "Value" : "PRODS",
+          "Output" : {
+            "DataObjectType" : "E",
+            "BusinessDataType" : "S"
+          }
+        } ]
+      }, {
+        "ColumnId" : "1",
+        "RowId" : "1",
+        "Expression" : "'1710'",
+        "AST" : [ {
+          "Id" : "3",
+          "Value" : "1710",
+          "Output" : {
+            "DataObjectType" : "E",
+            "BusinessDataType" : "S"
+          }
+        }, {
+          "Id" : "2",
+          "Placeholder" : true
+        }, {
+          "Id" : "1",
+          "Root" : true,
+          "Placeholder" : true,
+          "Children" : [ {
+            "Id" : "2",
+            "SequenceNumber" : 1
+          }, {
+            "Id" : "3",
+            "SequenceNumber" : 2
+          } ]
+        } ]
+      }, {
+        "ColumnId" : "2",
+        "RowId" : "3",
+        "Expression" : "'PRODS'",
+        "AST" : [ {
+          "Id" : "1",
+          "Root" : true,
+          "Placeholder" : true,
+          "Children" : [ {
+            "Id" : "2",
+            "SequenceNumber" : 1
+          }, {
+            "Id" : "3",
+            "SequenceNumber" : 2
+          } ]
+        }, {
+          "Id" : "3",
+          "Value" : "PRODS",
+          "Output" : {
+            "DataObjectType" : "E",
+            "BusinessDataType" : "S"
+          }
+        }, {
+          "Id" : "2",
+          "Placeholder" : true
+        } ]
+      }, {
+        "ColumnId" : "4",
+        "RowId" : "3",
+        "Expression" : "'sgsudipmath@gmail.com'",
+        "AST" : [ {
+          "Id" : "1",
+          "Root" : true,
+          "Value" : "sgsudipmath@gmail.com",
+          "Output" : {
+            "DataObjectType" : "E",
+            "BusinessDataType" : "S"
+          }
+        } ]
+      }, {
+        "ColumnId" : "6",
+        "RowId" : "3",
+        "Expression" : "'georg.klein@bestrunsap.com'",
+        "AST" : [ {
+          "Id" : "1",
+          "Root" : true,
+          "Value" : "georg.klein@bestrunsap.com",
+          "Output" : {
+            "DataObjectType" : "E",
+            "BusinessDataType" : "S"
+          }
+        } ]
+      }, {
+        "ColumnId" : "5",
+        "RowId" : "1",
+        "Expression" : "'sudip.ghosh@sap.com'",
+        "AST" : [ {
+          "Id" : "1",
+          "Root" : true,
+          "Value" : "sudip.ghosh@sap.com",
+          "Output" : {
+            "DataObjectType" : "E",
+            "BusinessDataType" : "S"
+          }
+        } ]
+      }, {
+        "ColumnId" : "3",
+        "RowId" : "3",
+        "Expression" : "'IES'",
+        "AST" : [ {
+          "Id" : "2",
+          "Placeholder" : true
+        }, {
+          "Id" : "1",
+          "Root" : true,
+          "Placeholder" : true,
+          "Children" : [ {
+            "Id" : "2",
+            "SequenceNumber" : 1
+          }, {
+            "Id" : "3",
+            "SequenceNumber" : 2
+          } ]
+        }, {
+          "Id" : "3",
+          "Value" : "IES",
+          "Output" : {
+            "DataObjectType" : "E",
+            "BusinessDataType" : "S"
+          }
+        } ]
+      }, {
+        "ColumnId" : "6",
+        "RowId" : "1",
+        "Expression" : "'sgsudipmath@gmail.com'",
+        "AST" : [ {
+          "Id" : "1",
+          "Root" : true,
+          "Value" : "sgsudipmath@gmail.com",
+          "Output" : {
+            "DataObjectType" : "E",
+            "BusinessDataType" : "S"
+          }
+        } ]
+      }, {
+        "ColumnId" : "7",
+        "RowId" : "3",
+        "Expression" : "'uwe.rattka@besrunsap.com'",
+        "AST" : [ {
+          "Id" : "1",
+          "Root" : true,
+          "Value" : "uwe.rattka@besrunsap.com",
+          "Output" : {
+            "DataObjectType" : "E",
+            "BusinessDataType" : "S"
+          }
+        } ]
+      }, {
+        "ColumnId" : "7",
+        "RowId" : "1",
+        "Expression" : "'sudip.ghosh@sap.com'",
+        "AST" : [ {
+          "Id" : "1",
+          "Root" : true,
+          "Value" : "sudip.ghosh@sap.com",
+          "Output" : {
+            "DataObjectType" : "E",
+            "BusinessDataType" : "S"
+          }
+        } ]
+      } ]
+    }
+  } ],
+  "RuleService" : [ {
+    "Id" : "8cb1627e3afd4c508bd398357c1ca59e",
+    "Name" : "GettingApproverDetails",
+    "Description" : [ {
+      "Language" : "en",
+      "Text" : "Service for getting approver details"
+    }, {
+      "Language" : "",
+      "Text" : "Service for getting approver details"
+    } ],
+    "Project" : "c0c245806f0549c8a493e908e2471f72",
+    "Annotations" : [ ],
+    "Vocabulary" : {
+      "Input" : [ {
+        "ObjectId" : "7903e470be324f6bbbea1df78b845f1a"
+      } ],
+      "Result" : [ {
+        "ObjectId" : "dc8f69036e634b008887f05a2d3bdefb"
+      } ],
+      "Reference" : [ ]
+    }
+  } ],
+  "Ruleset" : [ {
+    "Id" : "73fb9f92244845b4a91c36c4381d23a0",
+    "Name" : "GettingApproverDetails",
+    "Description" : [ {
+      "Language" : "",
+      "Text" : "Getting Approver Details"
+    }, {
+      "Language" : "en",
+      "Text" : "Getting Approver Details"
+    } ],
+    "Project" : "c0c245806f0549c8a493e908e2471f72",
+    "Rule" : [ {
+      "ObjectId" : "856c6d33da3445e6b1cdf10e9a3bce8b",
+      "SequenceNumber" : 1.00
+    } ],
+    "RuleService" : {
+      "ObjectId" : "8cb1627e3afd4c508bd398357c1ca59e"
+    },
+    "Vocabulary" : {
+      "Inclusion" : [ ],
+      "Exclusion" : [ ]
+    },
+    "Priority" : 50.00,
+    "Policy" : "A"
+  } ]
+}
